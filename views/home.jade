@@ -1,0 +1,24 @@
+extends layout
+
+block content
+
+	.compose
+		h1.welcome Welcome, #{user}!
+		textarea.new(maxlength=140, placeholder="Bake a new fritter")
+		.send
+			button.bake Send
+	.all
+		h1.all-tweets All fritters
+		ul.tweet-list
+			each tweet, i in tweetlist
+				li(data-id=tweet.uid)
+					.tweet-meat
+						p.tweet-author #{tweet.author}:
+						p.tweet-info #{tweet.body}
+						if user == tweet.author
+							input.tweet-edit.hide(value=tweet.body)
+						p.tweet-date #{tweet.date}
+					if user == tweet.author
+						.tweet-options
+							.edit Edit
+							.delete Delete

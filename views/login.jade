@@ -1,0 +1,22 @@
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		script(src="javascripts/jquery-1.11.1.js")
+		script(src="javascripts/login.js")
+
+	body.login-background
+		.header
+			.title
+				.fritter-icon
+			.nav-tools
+				input.username(placeholder="Email")
+				input.password(placeholder="Password", type="password")
+				button.login-button Login
+		.login
+			h1 Welcome to #{title}!
+			h2 First time user?  Sign up here.
+			input.signup-email(placeholder="Email")
+			input.signup-password(placeholder="Password", type="password")
+			input.signup-password-confirm(placeholder="Confirm password", type="password")
+			button.signup-confirm Sign me up!

@@ -1,0 +1,18 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		script(src="javascripts/jquery-1.11.1.js")
+		script(src="javascripts/home.js")
+	body
+		.header
+			.title
+				.fritter-icon
+			.nav-tools
+				.home Home
+				.mine My Fritters
+				.fav Favorites
+				.logout Logout
+	.content
+		block content
